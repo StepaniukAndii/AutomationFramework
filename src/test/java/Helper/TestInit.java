@@ -19,9 +19,9 @@ public class TestInit {
     public void setUp() {
 
         if (isOSMac()){
-            setProperty("");
+            setProperty("src/test/drivers/chromedriver_91_mac");
         }else if (isOSWindows()){
-            setProperty("");
+            setProperty("src/test/drivers/chromedriver_91_windows.exe");
         }else {
             setProperty("src/test/drivers/chromedriver_linux_91");
         }
