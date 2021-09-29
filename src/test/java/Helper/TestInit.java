@@ -13,7 +13,7 @@ public class TestInit {
 
     ChromeOptions options = new ChromeOptions();
 
-    boolean headless = false;
+    boolean headless = true;
 
     @BeforeMethod
     public void setUp() {
@@ -39,6 +39,12 @@ public class TestInit {
         System.setProperty("webdriver.chrome.driver", path);
         if (headless){
             options.addArguments("--headless");
+            options.addArguments("start-maximized");
+            options.addArguments("disable-infobars");
+            options.addArguments("--disable-extensions");
+            options.addArguments("--disable-gpu");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--no-sandbox");
         }
     }
 
