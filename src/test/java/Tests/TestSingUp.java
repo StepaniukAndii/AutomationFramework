@@ -11,7 +11,7 @@ public class TestSingUp extends TestInit {
     public void testSingUp() {
         RegisterPage registerPage = new RegisterPage(driver);
         openUrl("http://demowebshop.tricentis.com/register");
-        registerPage.getGenderMale().click();
+//        registerPage.getGenderMale().click();
         registerPage.getFirstNameField().sendKeys(createRandomNumber() + "TestUser");
         registerPage.getLastNameField().sendKeys(createRandomNumber() + "TestLastName");
         registerPage.getEmailField().sendKeys(createRandomNumber() + "test@gmail.com");
