@@ -19,6 +19,6 @@ public class TestSingUp extends TestInit {
         registerPage.getConfirmPasswordField().sendKeys("12345!QWd");
         registerPage.getRegisterBtn().click();
 
-        Assert.assertTrue(getUrl().contains("http://demowebshop.tricentis.com/registerresult"));
+        Assert.assertTrue(getUrl().contains("1908049812"));
     }
 }
