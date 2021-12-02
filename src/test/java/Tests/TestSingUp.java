@@ -11,7 +11,7 @@ public class TestSingUp extends TestInit {
     public void testSingUp() {
         RegisterPage registerPage = new RegisterPage(driver);
         openUrl("http://demowebshop.tricentis.com/register");
-//        registerPage.getGenderMale().click();
+        registerPage.getGenderMale().click();
         registerPage.getFirstNameField().sendKeys(createRandomNumber() + "TestUser");
         registerPage.getLastNameField().sendKeys(createRandomNumber() + "TestLastName");
         registerPage.getEmailField().sendKeys(createRandomNumber() + "test@gmail.com");
@@ -19,6 +19,6 @@ public class TestSingUp extends TestInit {
         registerPage.getConfirmPasswordField().sendKeys("12345!QWd");
         registerPage.getRegisterBtn().click();
 
-        Assert.assertTrue(getUrl().contains("1908049812"));
+        Assert.assertTrue(getUrl().contains("http://demowebshop.tricentis.com/registerresult"));
     }
 }
